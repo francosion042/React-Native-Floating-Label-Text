@@ -12,9 +12,9 @@ class FloatingLabelInput extends Component {
     const labelStyle = {
       position: "absolute",
       left: 0,
-      top: !isFocused ? 18 : 0,
-      fontSize: !isFocused ? 20 : 14,
-      color: !isFocused ? "#aaa" : "#000"
+      top: isFocused ? 0 : 18,
+      fontSize: isFocused ? 15 : 20,
+      color: isFocused ? "#000" : "#aaa"
     };
     return (
       <View style={{paddingTop: 18}}>
@@ -25,8 +25,7 @@ class FloatingLabelInput extends Component {
             height: 26,
             fontSize: 20,
             color: "#000",
-            borderBottomWidth: 1,
-            borderBottomColor: "#555"
+            borderBottomWidth: 1
           }}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
